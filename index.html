@@ -1,0 +1,42 @@
+
+<!-- esto controla todo lo que se va a renderar -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- contiene main.jsx entonces hara cambios en todo el doc -->
+    <!-- acuerdate que en html hay class y en jsx es className 
+    
+      CLASE DEL BACKGROUND:
+   bg-gradient-to-r:
+
+    This class applies a background gradient that transitions from left to right (horizontal gradient).
+    from-blue-50:
+
+    This class sets the starting color of the gradient to a very light shade of blue (blue-50).
+    to-transparent:
+
+    This class sets the ending color of the gradient to transparent.
+    text-slate-700:
+
+    This class sets the text color to slate-700, a medium-dark shade of gray from the Tailwind CSS color palette.
+    text-sm:
+
+    This class sets the text size to small. It corresponds to a specific font size and line height in Tailwind's default configuration.
+    sm:text-base:
+
+    This is a responsive class. It applies a base text size (typically the default or normal font size) when the screen size is at least sm (small screens, typically min-width: 640px).
+    -->
+    <div id="root" class="bg-gradient-to-r from-blue-50 to-transparent text-slate-700 text-sm sm:text-base" ></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
