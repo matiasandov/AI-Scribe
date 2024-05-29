@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import HomePage from './components/HomePage'
 import Header from './components/Header'
 import FileDisplay from './components/FileDisplay'
+import Information from './components/Information'
+import Transcribing from './components/Transcribing'
 
 
 function App() {
   const [file, setFile] = useState(null)
   const [audioStream, setAudioStream] = useState(null) 
-  const [output, setOutput] = useState(null)
+  const [output, setOutput] = useState(true)
   const [loading, setLoading] = useState(false)
 
   //if something is set we will we will return the display jsx
@@ -31,20 +33,30 @@ function App() {
         <section className='min-h-screen flex flex-col'>
         <Header/>
          {
-          //if true
+
+          output ? (
+            <Information/>
+          ): 
+            loading ?(
+              <Transcribing/>
+          ):
             isAudioAvailable ? (
               <FileDisplay
-                handleAudioReset = {handleAudioReset} 
-                file={file}
-                audioStream={setAudioStream} 
-              />
+                handleAudioReset={handleAudioReset}
+                file = {file}
+                audioStream = {setAudioStream}
               
-            )
-            //else
-            : (<HomePage 
-                  setAudioStream={setAudioStream} 
-                  setFile= {setFile}
-            />)
+              />
+            ):
+              (
+                <HomePage
+                  setFile = {setFile}
+                  setAudioStream = {setAudioStream}
+                
+                />
+              )
+
+          
           
           }
         </section>

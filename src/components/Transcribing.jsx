@@ -4,7 +4,7 @@ export default function Transcribing(props) {
     const {downloading} = props
   return (
     <div
-        className='flex items-center flex-col justify-center gap-10 md:gap-14 text-center py-24 p-4'
+        className='flex flex-1 items-center flex-col justify-center gap-10 md:gap-14 text-center pb-24 p-4'
     >
         <div>
 
@@ -14,7 +14,7 @@ export default function Transcribing(props) {
         </h1>
 
         <p>{
-            !downloading ? 'warming up cylidners' : 'core cylinders engaged'
+            !downloading ? 'warming up cylinders' : 'core cylinders engaged'
             
         }</p>
 
